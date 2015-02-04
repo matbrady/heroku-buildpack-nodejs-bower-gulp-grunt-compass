@@ -180,7 +180,7 @@ fi
 # we do it globally because we want to be able to run bundle even
 # from within grunt
 export HOME=$build_dir
-export GEM_HOME=$build_dir/.gem/ruby/1.9.1
+export GEM_HOME=$build_dir/.gem/ruby/2.1.4
 export PATH="$GEM_HOME/bin:$PATH"
 
 (
@@ -217,7 +217,7 @@ fi
 status "Building runtime environment"
 mkdir -p $build_dir/.profile.d
 echo "export PATH=\"\$HOME/vendor/node/bin:\$HOME/bin:\$HOME/node_modules/.bin:\$PATH\";" > $build_dir/.profile.d/nodejs.sh
-echo "export PATH=\"\$HOME/.gem/ruby/1.9.1/bin:\$PATH\"" > $build_dir/.profile.d/ruby.sh
+echo "export PATH=\"\$HOME/.gem/ruby/2.1.4/bin:\$PATH\"" > $build_dir/.profile.d/ruby.sh
 
 # Update the PATH
 status "Building runtime environment"
